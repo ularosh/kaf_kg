@@ -8,14 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends CI_Controller {
 
-//    function Page() {
-//        parent::Controller();
-    //      $this->view_data['base_url']=base_url();
-//    }
-    //public function index() {
-    //   $this->index2();
-    // }
-
     public function index($id = 1, $parents = 0) {
         $this->lang->load('content', $lang = $_SESSION['language']);
         $data['um_lg_News'] = $this->lang->line('um_lg_News');
@@ -177,7 +169,7 @@ class Page extends CI_Controller {
     }   
     
      public function delete_massange() {
-         //$this->db->where('id', 3);
+
          $this->db->delete('massage', array('id' => 2));            
         
         header('Location: ' . base_url('page/contact'));
