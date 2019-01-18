@@ -10,7 +10,8 @@ class Get_model extends CI_Model {
             return $query->result_array();
     }
 
-    function m_services() {
+    function m_services($id=0) {
+            if ($id>0) $this->db->where('id', $id);
             $query = $this->db->get('ex_page');
             return $query->result_array();
     }
